@@ -45,9 +45,9 @@
         <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/5561999986579?text=Ol%C3%A1%2C%20J%C3%BAlio.%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20seus%20livros." data-i18n="whatsapp">Falar pelo WhatsApp</a>
       </div>
     </div>
-    <div class="quote-card">
-      <span>“</span>
-      <p data-i18n="heroQuote">Todo desejo carrega, em si, um convite à liberdade.</p>
+    <div class="hero-books" aria-label="Escolha uma obra">
+      <a class="hero-book" href="#linha-invisivel"><img src="assets/linha-invisivel.png" alt="Linha Invisível"><span data-i18n="heroLinha">Quando o amor permanece, mas a forma de amar já não basta.</span></a>
+      <a class="hero-book" href="#geografia-dos-desejos"><img src="assets/geografia-dos-desejos.png" alt="Geografia dos Desejos"><span data-i18n="heroGeo">Quando o desejo revela aquilo que ainda não ousamos dizer.</span></a>
     </div>
   </section>
 
@@ -55,11 +55,11 @@
     <p class="eyebrow" data-i18n="works">OBRAS</p>
     <h2 data-i18n="booksTitle">Livros</h2>
 
-    <article class="book">
-      <div class="cover cover-image">
+    <article class="book" id="linha-invisivel">
+      <a class="cover cover-image cover-link" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B0GQD4GR5S" aria-label="Linha Invisível na Amazon">
         <img src="assets/linha-invisivel.png" alt="Capa oficial de Linha Invisível">
         
-      </div>
+      </a>
       <div class="book-copy">
         <p class="tag" data-i18n="novel">ROMANCE</p>
         <h3>Linha Invisível</h3>
@@ -71,9 +71,10 @@
           <div class="sample" id="sample-linha">
             <p>Brasília amanhecia como se tivesse sido passada a ferro.</p>
             <p>O céu liso. As vias abertas demais. Os prédios alinhados com uma precisão que parecia impedir acidentes — inclusive os emocionais.</p>
-            <p class="sample-hook" data-i18n="linhaHook">Augusto acreditava em estruturas. Até que uma fissura começou a aparecer.</p>
+            <p class="sample-hook">Tudo estava correto.<br>E o corpo começava a pedir erro.</p>
           </div>
         </div>
+        <div class="book-meta"><span>1ª edição · 2026</span><span>ISBN 978-65-01-95359-5</span><span data-i18n="amazonAvailable">Disponível na Amazon</span></div>
         <div class="book-actions">
           <a class="btn primary" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B0GQD4GR5S" data-i18n="buyLinha">Quero continuar essa história</a>
           <a class="text-link" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B0H4GYMWYJ" data-i18n="spanishEdition">Edição em espanhol →</a>
@@ -81,8 +82,8 @@
       </div>
     </article>
 
-    <article class="book reverse">
-      <div class="cover cover-image"><img src="assets/geografia-dos-desejos.png" alt="Capa oficial de Geografia dos Desejos"></div>
+    <article class="book reverse" id="geografia-dos-desejos">
+      <a class="cover cover-image cover-link" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B0GPY9S4JM" aria-label="Geografia dos Desejos na Amazon"><img src="assets/geografia-dos-desejos.png" alt="Capa oficial de Geografia dos Desejos"></a>
       <div class="book-copy">
         <p class="tag" data-i18n="stories">CONTOS</p>
         <h3>Geografia dos Desejos</h3>
@@ -104,7 +105,7 @@
     </article>
 
     <article class="book">
-      <div class="cover cover-image"><img src="assets/linea-invisible.png" alt="Portada oficial de Línea Invisible"></div>
+      <a class="cover cover-image cover-link" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B0H4GYMWYJ" aria-label="Línea Invisible en Amazon"><img src="assets/linea-invisible.png" alt="Portada oficial de Línea Invisible"></a>
       <div class="book-copy">
         <p class="tag" data-i18n="spanishNovel">EDIÇÃO EM ESPANHOL</p>
         <h3>Línea Invisible</h3>
@@ -139,19 +140,23 @@
   </section>
 
   <section id="leitores" class="section readers">
-    <p class="eyebrow" data-i18n="readersLabel">VOZES DE QUEM LEU</p>
-    <h2 data-i18n="readersTitle">Leitores</h2>
-    <p class="readers-intro" data-i18n="readersIntro">Este espaço será destinado às impressões dos leitores. A versão publicada poderá receber comentários compartilhados e moderados.</p>
-    <div class="comment-demo">
-      <label data-i18n="yourName">Seu nome</label>
-      <input id="name" maxlength="60" placeholder="Nome">
-      <label data-i18n="yourComment">Seu comentário</label>
-      <textarea id="comment" maxlength="800" rows="5" placeholder="Conte sua experiência com a leitura..."></textarea>
-      <button class="btn primary" id="commentBtn" data-i18n="sendComment">Enviar comentário</button>
-      <p class="notice" id="commentNotice" data-i18n="commentNotice">Demonstração: o envio público será ativado na publicação, com moderação anti-spam.</p>
+    <p class="eyebrow" data-i18n="readersLabel">DEPOIS DA LEITURA</p>
+    <h2 data-i18n="readersTitle">O livro termina. A conversa, não.</h2>
+    <p class="readers-intro" data-i18n="readersIntro">Se uma passagem ficou com você, se uma personagem incomodou ou se alguma pergunta continuou depois da última página, quero ouvir sua impressão.</p>
+    <a class="btn primary" target="_blank" rel="noopener" href="https://wa.me/5561999986579?text=Ol%C3%A1%2C%20J%C3%BAlio.%20Li%20um%20dos%20seus%20livros%20e%20gostaria%20de%20compartilhar%20minha%20impress%C3%A3o." data-i18n="shareReading">Compartilhar minha leitura</a>
+  </section>
+
+  <section class="final-cta">
+    <p class="eyebrow" data-i18n="finalLabel">A PRÓXIMA PÁGINA É SUA</p>
+    <h2 data-i18n="finalTitle">Talvez você não esteja procurando apenas uma história.</h2>
+    <p data-i18n="finalText">Talvez esteja procurando uma pergunta que ainda não conseguiu formular.</p>
+    <div class="final-books">
+      <a href="https://www.amazon.com.br/dp/B0GQD4GR5S" target="_blank" rel="noopener"><img src="assets/linha-invisivel.png" alt="Linha Invisível"><span data-i18n="finalLinha">Continuar com Linha Invisível →</span></a>
+      <a href="https://www.amazon.com.br/dp/B0GPY9S4JM" target="_blank" rel="noopener"><img src="assets/geografia-dos-desejos.png" alt="Geografia dos Desejos"><span data-i18n="finalGeo">Entrar em Geografia dos Desejos →</span></a>
     </div>
   </section>
 </main>
+<a id="mobileBuy" class="mobile-buy" href="https://www.amazon.com.br/dp/B0GQD4GR5S" target="_blank" rel="noopener"><span data-i18n="mobileBuy">Ler na Amazon →</span></a>
 
 <footer>
   <div><strong>JÚLIO ROCHA</strong><br><span data-i18n="footer">Literatura, desejo e liberdade.</span></div>
