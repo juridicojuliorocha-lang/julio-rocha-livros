@@ -69,3 +69,13 @@ footer{background:#100e0c;color:#e8dfd4;border-top:3px solid var(--wine)}footer 
 a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 @media(max-width:800px){.reader-fit{padding:12px 14px;border-left:2px solid var(--gold);background:rgba(201,165,106,.07);font-family:"Cormorant Garamond",serif;font-size:19px;line-height:1.4}}
+
+/* Final desktop polish */
+@media(min-width:801px){
+ .nav{position:relative;top:auto;z-index:10}
+ .reader-fit{font-size:21px!important;line-height:1.45!important;padding:16px 18px;margin-top:20px}
+ .readers{padding-top:95px;padding-bottom:95px}
+ .readers h2{font-size:64px;max-width:560px}
+ .readers-intro{font-size:22px;line-height:1.65}
+ #geografia-dos-desejos{align-items:center}
+}
