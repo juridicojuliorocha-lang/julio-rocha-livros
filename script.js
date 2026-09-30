@@ -18,3 +18,13 @@ const originalSetLang=setLang;
 setLang=function(l){originalSetLang(l);const b=BIO[l]||BIO.pt;document.getElementById("bioText").innerHTML=b.bioFull;document.querySelector(".author-text").classList.toggle("expanded",bioExpanded);document.getElementById("bioToggle").textContent=bioExpanded?b.readLess:b.readMore;}
 document.getElementById("bioToggle").onclick=()=>{bioExpanded=!bioExpanded;setLang(localStorage.getItem("jr-lang")||"pt")};
 setLang(localStorage.getItem("jr-lang")||"pt");
+
+document.querySelectorAll(".sample-toggle").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+   const el=document.getElementById(btn.dataset.target);
+   const open=el.classList.toggle("open");
+   const l=localStorage.getItem("jr-lang")||"pt";
+   const labels={pt:["Leia um fragmento →","Recolher ↑"],es:["Lee un fragmento →","Cerrar ↑"],en:["Read an excerpt →","Close ↑"]};
+   btn.textContent=labels[l][open?1:0];
+ });
+});
