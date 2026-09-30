@@ -20,3 +20,27 @@ footer{background:#100e0c;color:#e8dfd4;border-top:3px solid var(--wine)}footer 
 .sample.open{display:block}
 .sample p{font-family:"Cormorant Garamond",serif;font-size:21px;line-height:1.5;margin:0 0 10px}
 .sample-hook{font-style:italic}
+
+/* Conversion architecture v2 */
+.hero-books{display:flex;gap:22px;align-items:flex-end;justify-content:center}
+.hero-book{width:min(15vw,190px);text-decoration:none;color:var(--espresso);transition:transform .25s}
+.hero-book:hover{transform:translateY(-7px)}
+.hero-book img{width:100%;display:block;box-shadow:0 24px 50px rgba(43,29,22,.25)}
+.hero-book span{display:block;font-family:"Cormorant Garamond",serif;font-size:17px;line-height:1.25;margin-top:13px}
+.cover-link{text-decoration:none;display:block}
+.book-meta{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0}
+.book-meta span{font-size:11px;letter-spacing:.06em;padding:7px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.final-cta{padding:100px 7vw;text-align:center;background:linear-gradient(135deg,#eee3d4,#f7f2e9)}
+.final-cta h2{font-family:"Cormorant Garamond",serif;font-size:clamp(44px,5vw,72px);line-height:1;max-width:900px;margin:14px auto}
+.final-cta>p:not(.eyebrow){font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--muted)}
+.final-books{display:flex;justify-content:center;gap:50px;margin-top:45px}
+.final-books a{width:190px;text-decoration:none;color:var(--wine);font-weight:600}
+.final-books img{width:100%;display:block;box-shadow:0 20px 45px rgba(43,29,22,.24);margin-bottom:14px;transition:transform .25s}
+.final-books a:hover img{transform:translateY(-6px)}
+.mobile-buy{display:none}
+@media(max-width:800px){
+ .hero-books{gap:15px;align-items:start}.hero-book{width:44%}.hero-book span{font-size:15px}
+ .final-books{gap:22px}.final-books a{width:42vw;max-width:165px}
+ .mobile-buy{display:block;position:fixed;z-index:20;left:14px;right:14px;bottom:12px;text-align:center;padding:14px 18px;background:var(--wine);color:var(--white);text-decoration:none;border-radius:999px;font-weight:600;box-shadow:0 8px 28px rgba(0,0,0,.24)}
+ body{padding-bottom:72px}
+}
