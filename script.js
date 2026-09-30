@@ -28,3 +28,16 @@ document.querySelectorAll(".sample-toggle").forEach(btn=>{
    btn.textContent=labels[l][open?1:0];
  });
 });
+
+const mobileBuy=document.getElementById("mobileBuy");
+if(mobileBuy){
+ const targets=[
+  {el:document.getElementById("linha-invisivel"),url:"https://www.amazon.com.br/dp/B0GQD4GR5S"},
+  {el:document.getElementById("geografia-dos-desejos"),url:"https://www.amazon.com.br/dp/B0GPY9S4JM"}
+ ];
+ window.addEventListener("scroll",()=>{
+   let best=targets[0],dist=Infinity;
+   targets.forEach(t=>{if(t.el){const d=Math.abs(t.el.getBoundingClientRect().top-160);if(d<dist){dist=d;best=t}}});
+   mobileBuy.href=best.url;
+ },{passive:true});
+}
