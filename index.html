@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Site oficial do escritor Júlio Rocha. Conheça Linha Invisível, Línea Invisible e Geografia dos Desejos.">
+  <title>Júlio Rocha | Livros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#inicio">JÚLIO ROCHA</a>
+  <nav>
+    <a href="#livros" data-i18n="navBooks">Livros</a>
+    <a href="#autor" data-i18n="navAuthor">Autor</a>
+    <a href="#leitores" data-i18n="navReaders">Leitores</a>
+  </nav>
+  <div class="langs" aria-label="Idioma">
+    <button class="lang active" data-lang="pt">PT</button>
+    <button class="lang" data-lang="es">ES</button>
+    <button class="lang" data-lang="en">EN</button>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow" data-i18n="eyebrow">LITERATURA • DESEJO • LIBERDADE</p>
+      <h1 data-i18n="heroTitle">Histórias sobre aquilo que nos atravessa — mesmo quando não sabemos nomear.</h1>
+      <p class="lead" data-i18n="heroLead">Conheça os livros de Júlio Rocha: narrativas sobre amor, desejo, escolhas e as fissuras invisíveis da vida contemporânea.</p>
+      <div class="actions">
+        <a class="btn primary" href="#livros" data-i18n="discover">Conheça os livros</a>
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/5561999986579?text=Ol%C3%A1%2C%20J%C3%BAlio.%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20seus%20livros." data-i18n="whatsapp">Falar pelo WhatsApp</a>
+      </div>
+    </div>
+    <div class="quote-card">
+      <span>“</span>
+      <p data-i18n="heroQuote">Todo desejo carrega, em si, um convite à liberdade.</p>
+    </div>
+  </section>
+
+  <section id="livros" class="section">
+    <p class="eyebrow" data-i18n="works">OBRAS</p>
+    <h2 data-i18n="booksTitle">Livros</h2>
+
+    <article class="book">
+      <div class="cover cover-image">
+        <img src="assets/linha-invisivel.png" alt="Capa oficial de Linha Invisível">
+        
+      </div>
+      <div class="book-copy">
+        <p class="tag" data-i18n="novel">ROMANCE</p>
+        <h3>Linha Invisível</h3>
+        <p data-i18n="linhaDesc">Brasília foi construída para funcionar. Augusto e Helena também. Quando um encontro improvável e uma viagem a Pequim introduzem fissuras no casamento cuidadosamente construído, ambos precisam enfrentar uma pergunta incômoda: o que fazer quando o amor ainda existe, mas a forma encontrada para vivê-lo já não cabe?</p>
+        <div class="book-actions">
+          <a class="btn primary" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B0GQD4GR5S" data-i18n="buyPt">Comprar na Amazon</a>
+          <a class="text-link" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B0H4GYMWYJ" data-i18n="spanishEdition">Edição em espanhol →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="book reverse">
+      <div class="cover cover-image"><img src="assets/geografia-dos-desejos.png" alt="Capa oficial de Geografia dos Desejos"></div>
+      <div class="book-copy">
+        <p class="tag" data-i18n="stories">CONTOS</p>
+        <h3>Geografia dos Desejos</h3>
+        <p data-i18n="geoDesc">Entre o corpo e o pensamento, entre o amor e o abismo, o livro traça mapas invisíveis que unem pessoas através do desejo, da liberdade e da palavra. Uma cartografia do íntimo em que amar também pode significar atravessar fronteiras.</p>
+        <div class="book-actions">
+          <a class="btn primary" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B0GPY9S4JM" data-i18n="buyPt">Comprar na Amazon</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="cover cover-image"><img src="assets/linea-invisible.png" alt="Portada oficial de Línea Invisible"></div>
+      <div class="book-copy">
+        <p class="tag" data-i18n="spanishNovel">EDIÇÃO EM ESPANHOL</p>
+        <h3>Línea Invisible</h3>
+        <p data-i18n="lineaDesc">A edição em espanhol de Linha Invisível, apresentada em capa própria e disponível para compra na Amazon.</p>
+        <div class="book-actions">
+          <a class="btn primary" target="_blank" rel="noopener" href="https://www.amazon.com.br/dp/B0H4GYMWYJ" data-i18n="buyAmazon">Comprar na Amazon</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="autor" class="section author author-profile">
+    <div class="author-portrait-wrap">
+      <img class="author-portrait" src="assets/julio-rocha.png" alt="Retrato de Júlio Rocha">
+      <p class="eyebrow" data-i18n="aboutLabel">O AUTOR</p>
+      <h2>Júlio Rocha</h2>
+    </div>
+    <div class="author-text">
+      <div id="bioText" data-i18n-html="bioFull"></div>
+      <button class="author-more" id="bioToggle" type="button" data-i18n="readMore">Leia mais</button>
+    </div>
+  </section>
+
+  <section id="leitores" class="section readers">
+    <p class="eyebrow" data-i18n="readersLabel">VOZES DE QUEM LEU</p>
+    <h2 data-i18n="readersTitle">Leitores</h2>
+    <p class="readers-intro" data-i18n="readersIntro">Este espaço será destinado às impressões dos leitores. A versão publicada poderá receber comentários compartilhados e moderados.</p>
+    <div class="comment-demo">
+      <label data-i18n="yourName">Seu nome</label>
+      <input id="name" maxlength="60" placeholder="Nome">
+      <label data-i18n="yourComment">Seu comentário</label>
+      <textarea id="comment" maxlength="800" rows="5" placeholder="Conte sua experiência com a leitura..."></textarea>
+      <button class="btn primary" id="commentBtn" data-i18n="sendComment">Enviar comentário</button>
+      <p class="notice" id="commentNotice" data-i18n="commentNotice">Demonstração: o envio público será ativado na publicação, com moderação anti-spam.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div><strong>JÚLIO ROCHA</strong><br><span data-i18n="footer">Literatura, desejo e liberdade.</span></div>
+  <a target="_blank" rel="noopener" href="https://wa.me/5561999986579">WhatsApp</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
