@@ -39,3 +39,40 @@ if(mobileBuy){
    mobileBuy.href=best.url;
  },{passive:true});
 }
+
+
+/* Measurement layer: page source/campaign + conversion events */
+(function(){
+  const params=new URLSearchParams(location.search);
+  const source=params.get("utm_source")||"direct";
+  const campaign=params.get("utm_campaign")||"none";
+  const medium=params.get("utm_medium")||"none";
+  const sent=new Set();
+
+  function track(name, onceKey){
+    const key=onceKey||name;
+    if(sent.has(key)) return;
+    sent.add(key);
+    const path="/event/"+name+"?source="+encodeURIComponent(source)+"&campaign="+encodeURIComponent(campaign)+"&medium="+encodeURIComponent(medium);
+    const title=name+" | "+source+" | "+campaign;
+    if(window.goatcounter && typeof window.goatcounter.count==="function"){
+      window.goatcounter.count({path:path,title:title,event:true});
+    }else{
+      window.addEventListener("load",()=>{if(window.goatcounter) window.goatcounter.count({path:path,title:title,event:true})},{once:true});
+    }
+  }
+
+  document.querySelectorAll("[data-track]").forEach(el=>{
+    el.addEventListener("click",()=>track(el.dataset.track,el.dataset.track+"-"+Date.now()));
+  });
+
+  document.querySelectorAll("[data-track-open]").forEach(el=>{
+    el.addEventListener("click",()=>{
+      const target=document.getElementById(el.dataset.target);
+      if(target && !target.classList.contains("open")) track(el.dataset.trackOpen,el.dataset.trackOpen);
+    });
+  });
+
+  // Record campaign attribution as an event, allowing source/campaign comparisons.
+  if(source!=="direct" || campaign!=="none") track("campaign_visit","campaign-"+source+"-"+campaign+"-"+medium);
+})();
